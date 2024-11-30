@@ -1,0 +1,52 @@
+body {
+	margin-left: calc(0.3 * 100%);
+	margin-right: calc(0.3 * 100%);
+	background-color: rgb(176, 118, 31, 0.6);
+	font-family: monospace;
+}
+
+a { text-decoration: none; }
+
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+}
+/**Loader style taken from w3schools*/
+.loader {
+	margin-top: 25px;
+  	border: 5px solid black;
+	border-top: 5px solid rgb(176, 118, 31, 0.01);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	animation: spin 1s linear infinite;}
+
+@keyframes spin {
+  	0% { transform: rotate(0deg); }
+  	100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 1300px) {
+	body {
+		margin-left: calc(0.2 * 100%);
+		margin-right: calc(0.2 * 100%);
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		margin-left: calc(0.1 * 100%);
+		margin-right: calc(0.1 * 100%);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	a { font-size: small; }
+}

@@ -1,0 +1,61 @@
+{@java.lang.String title}
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<link
+			href="home-page.css"
+			rel="stylesheet" />
+		<link
+			href="global.css"
+			rel="stylesheet" />
+		<script
+			type="text/javascript"
+			src="home-page.js"
+			defer></script>
+		<title>{title}</title>
+	</head>
+	<body>
+		<h5 id="welcome-text">
+			Welcome to the simple SSO.<br/>Please enter your email and password.
+		</h5>
+		<div id="auth-form-block">
+			<form
+				id="auth-form"
+				name="auth-form"
+				enctype="application/x-www-form-urlencoded"
+				onsubmit="signIn(event); displayLoader(1);"
+				method="post"
+				autocomplete="off">
+				<label for="form-auth-email">
+					Email
+				</label>
+				<input
+					name="form-auth-email"
+					id="form-auth-email"
+					type="email"
+					required/>
+				<label for="form-auth-password">
+					Password
+				</label>
+				<input
+					name="form-auth-password"
+					id="form-auth-password"
+					type="password"
+					required/>
+			</form>
+			<button
+				id="submit-button"
+				form="auth-form"
+				type="submit">
+				Sign in
+			</button>
+			<div
+				id="auth-loader"
+				class="loader" />
+		</div>
+	</body>
+</html>
